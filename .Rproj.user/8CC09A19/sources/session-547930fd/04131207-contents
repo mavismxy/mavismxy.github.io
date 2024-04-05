@@ -1,0 +1,20 @@
+---
+title: "Challenge 1 Final"
+author: "Mavis"
+date: "2024-01-16"
+output:
+  pdf_document: default
+  html_document: default
+---
+```
+
+## R Markdown
+```{r, out.height= "600px",out.width= "400px",echo=TRUE,eval=TRUE,fig.cap="I love Squawk Box"}
+knitr::include_graphics("/Users/mavis/Downloads/IMG_3475.JPG") 
+```
+
+```{r, out.height= "250px",out.width= "450px",echo=TRUE,eval=TRUE,fig.cap="Screenshot of Code"}
+knitr::include_graphics("/Users/mavis/Desktop/screenshot image.png") 
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

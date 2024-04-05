@@ -5,5 +5,5 @@ title: "About"
 Hi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.
 
 ```{r}
-
+knitr::include_graphics("/Users/mavis/Downloads/IMG_3475.JPG") 
 ```
