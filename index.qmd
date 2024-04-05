@@ -2,6 +2,10 @@
 title: "mavismxy.github.io"
 ---
 
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://mavismxy.shinyapps.io/personal_app/"> </iframe>
+```
+
 TRIAL RENDER
 
 TYPE IN R, THEN RENDER
