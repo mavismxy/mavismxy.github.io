@@ -3,7 +3,7 @@
     "path": "~/Downloads/mavismxy.github.io/about.qmd",
     "project_path": "about.qmd",
     "type": "quarto_markdown",
-    "hash": "519071000",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1711450034405.0,
@@ -16,7 +16,7 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "333:0",
+        "rmdVisualModeLocation": "356:703",
         "cursorPosition": "6,0",
         "scrollLine": "0"
     },
