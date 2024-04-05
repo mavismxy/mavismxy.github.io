@@ -1,14 +1,14 @@
 {
-    "id": "D672A516",
-    "path": "~/Downloads/mavismxy.github.io/about.qmd",
-    "project_path": "about.qmd",
+    "id": "292CC45B",
+    "path": "~/Downloads/mavismxy.github.io/index.qmd",
+    "project_path": "index.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1711450034405.0,
+    "created": 1711449397315.0,
     "source_on_save": false,
-    "relative_order": 3,
+    "relative_order": 1,
     "properties": {
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
@@ -16,14 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "2:0",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1710501608,
+    "lastKnownWriteTime": 1711449743,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1710501608,
+    "last_content_update": 1711449743553,
     "read_only": false,
     "read_only_alternatives": []
 }

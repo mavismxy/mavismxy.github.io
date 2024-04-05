@@ -1,0 +1,14 @@
+{
+  "hash": "1b67cfd7d6ce52a10a9973e4aa9dd804",
+  "result": {
+    "markdown": "---\ntitle: \"About\"\n---\n\n\nHi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
