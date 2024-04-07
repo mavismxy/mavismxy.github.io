@@ -2,9 +2,14 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
+  titlePanel("US Interest Rate"),
   sidebarLayout(
-    sidebarPanel(sliderInput("samplesize","Sample Size:",min = 100,max = 10000,value = 1000)),
-    mainPanel(plotOutput("distPlot"))
+    sidebarPanel(
+      p("text on sidebar")
+    ),
+    mainPanel(
+      p("text on main panel")
+    )
   )
 )
 

@@ -1,4 +1,0 @@
-install.packages('rsconnect')
-# rsconnect::setAccountInfo(name='mavismxy',
-token='D961D5E41365828F0700529E4D91D6B5'
-secret='<SECRET>')
