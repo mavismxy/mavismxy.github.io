@@ -1,0 +1,334 @@
+---
+title: "Midterm Notes"
+author: "Mavis"
+date: "2024-02-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+
+### for starting to write r code, always remember to load tidyverse
+```{r, eval=TRUE,echo=TRUE}
+# Load package tidyverse
+library(tidyverse)
+```
+
+
+### Week 2: Basic Functions
+## assigning variable to data set
+```{r, echo=TRUE, eval=TRUE}
+starwars_data <- starwars
+```
+
+## to ask about a data set
+```{r, echo=TRUE, eval=TRUE}
+?starwars
+```
+
+## glimpse data set
+```{r, echo=TRUE, eval=TRUE}
+glimpse(starwars)
+```
+
+## to access a column
+```{r, echo=TRUE, eval=TRUE}
+starwars$height
+```
+
+## to access a column with only 3 entries
+```{r, echo=TRUE, eval=TRUE}
+starwars$films[1:3]
+```
+
+## to filter and extract rows
+```{r, echo=TRUE, eval=TRUE}
+filter_rows <- c("Luke Skywalker", "R2-D2", "Darth Vader")
+starwars %>% filter(name%in%filter_rows)
+```
+
+## to filter some rows and select some of their attributes
+```{r, echo=TRUE, eval=TRUE}
+filter_rows <- c("Luke Skywalker", "R2-D2")
+starwars %>% filter(name%in%filter_rows) %>% select(name, height, mass)
+```
+
+## to filter and select the attributes as a list
+```{r, echo=TRUE, eval=TRUE}
+filter_rows <- c("Luke Skywalker", "R2-D2")
+starwars %>% filter(name%in%filter_rows) %>% pull(films)
+```
+
+## number of rows in the data set
+```{r, echo=TRUE, eval=TRUE}
+nrow(starwars)
+```
+
+## number of columns in the data set
+```{r, echo=TRUE, eval=TRUE}
+ncol(starwars)
+```
+
+## number of rows and columns in the data set
+```{r, echo=TRUE, eval=TRUE}
+dim(starwars)
+```
+
+## obtaining statistics from a data set
+```{r, echo=TRUE, eval=TRUE}
+library(Tmisc)
+quartet %>% filter(set=="I")
+
+quartet %>%
+  summarise(
+    mean_x = mean(x),
+    mean_y = mean(y),
+    sd_x = sd(x),
+    sd_y = sd(y),
+    r  = cor(x, y)
+  )
+```
+
+## using ggplot
+```{r, echo=TRUE, eval=TRUE}
+ggplot(data=starwars) +
+  aes(x=height, y=mass) +
+    geom_point() +
+      labs(x="Height (cm)", y="Weight (kg)", title="Mass vs Height", caption="Source: tidyverse/starwars dataset")
+```
+
+
+### Week 3: Variables
+## types of variables
+```{r, echo=TRUE, eval=TRUE}
+#character
+x <- 'A'
+#character (string)
+x <- "Apple"
+#logical
+x <- FALSE
+#integer
+x <- 5L
+#numeric (double)
+x <- 5
+#complex
+x <- 1i
+```
+
+## forcing some values to be NA if it does not fit the variable type
+```{r, echo=TRUE, eval=TRUE}
+cat_lovers <- read_csv("/Users/mavis/Downloads/NM2207/Week 3/cat-lovers.csv")
+as.integer((cat_lovers$number_of_cats))
+mean(as.integer((cat_lovers$number_of_cats)))
+```
+
+## creating a vector
+```{r, echo=TRUE, eval=TRUE}
+x <- c()
+##c is used to insert elements into a vector
+```
+
+## implicit coercion
+```{r, echo=TRUE, eval=TRUE}
+x <- (1L)
+x <- c(x, 2)
+typeof(x)
+```
+
+## explicit coercion
+```{r, echo=TRUE, eval=TRUE}
+x <- (1L)
+x <- as.character(x)
+x <- as.numeric(x)
+typeof(x)
+```
+
+## accessing elements of a vector
+```{r, echo=TRUE, eval=TRUE}
+x <- c(1, 10, 9, 8, 1, 3, 5)
+#one index
+x[3]
+#consecutive indices
+x[2:4]
+#non-consecutive indices
+x[c(1, 3, 5)]
+#using logical vector
+x[c(TRUE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE)]
+#using conditions
+x[x<10]
+```
+
+## examining vectors
+```{r, echo=TRUE, eval=TRUE}
+#length of vector
+length(x)
+#class of vector
+typeof(x)
+#structure of vector
+str(x)
+```
+
+## lists are vectors where there are elements of various types
+```{r, echo=TRUE, eval=TRUE}
+x <- list(1, "a", 0.289, TRUE)
+x <- c(1, 2, 3, 4, 10)
+x <- as.list(x)
+```
+
+## putting elements into a list
+```{r, echo=TRUE, eval=TRUE}
+my_pie = list(type="key lime", diameter=7)
+```
+
+## accessing elements in a list
+```{r, echo=TRUE. eval=TRUE}
+#names in list
+names(my_pie)
+#elements in list by their type
+my_pie$type
+#using [] to return a list
+my_pie["type"]
+```
+
+
+### Week 4: Manipulating Data
+## looking at the different variables
+```{r, echo=TRUE,eval=TRUE}
+library(tidyverse)
+hotels <- read_csv("/Users/mavis/Downloads/NM2207/Week 4/hotels.csv")
+names(hotels)
+glimpse(hotels)
+```
+
+## selecting columns
+```{r, echo=TRUE, eval=TRUE}
+#selecting one column
+select(hotels, lead_time)
+#selecting more columns
+select(hotels, lead_time, agent, market_segment)
+```
+
+## arranging entries in a chosen column
+```{r, echo=TRUE. eval=TRUE}
+#using this will arrange in increasing order
+arrange(hotels, lead_time)
+#to arrange in decreasing order
+arrange(hotels, desc(lead_time))
+```
+
+## using select and arrange
+```{r, echo=TRUE, eval=TRUE}
+arrange(
+  select(hotels, lead_time),
+  desc(lead_time)
+)
+```
+
+## piping
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  select(lead_time) %>%
+  arrange(desc(lead_time))
+```
+
+## filter to pick rows matching a condition
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  filter(
+    children >= 1
+  ) %>%
+    select(hotel, children)
+```
+
+## filter to pick rows matching multiple conditions
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  filter(
+    children >= 1,
+    hotel == "City Hotel"
+  ) %>%
+    select(hotel, children)
+```
+
+## pick rows using slice()
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  slice(1:5)
+```
+
+## pick unique rows using distinct()
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  distinct(hotel)
+```
+
+## use mutate to create a new column
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  mutate(little_ones = children + babies) %>%
+    select(hotel, little_ones, children, babies)
+```
+
+## use mutate to create multiple new columns
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  mutate(little_ones = children + babies,
+         average_little_ones = mean(little_ones)) %>%
+  select(hotel, little_ones, children, babies, average_little_ones)
+```
+
+
+## get frequencies using count()
+```{r, echo=TRUE, eval=TRUE}
+#in alphabetical order
+hotels %>%
+  count(market_segment)
+#in decreasing order of counts
+hotels %>%
+  count(market_segment, sort = TRUE)
+#count multiple variables
+hotels %>%
+  count(hotel, market_segment)
+```
+
+## summarise and group by
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  group_by(hotel) %>%
+  summarise(count = n())
+```
+
+## multiple summary statistics
+```{r, echo=TRUE, eval=TRUE}
+hotels %>%
+  summarise(
+    min_adr = min(adr),
+    mean_adr = mean(adr),
+    median_adr = median(adr),
+    max_adr = max(adr)
+  )
+```
+
+
+### Week 5: Functions
+## function anatomy
+```{r, echo=TRUE, eval=TRUE}
+function_name <- function(arguments) {
+  body_of_function
+  return(output)
+}
+```
+
+
+```{r, echo=TRUE, eval=TRUE}
+select()
+
