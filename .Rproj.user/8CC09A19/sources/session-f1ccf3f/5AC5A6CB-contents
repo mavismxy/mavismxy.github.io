@@ -4,7 +4,7 @@ library(ggplot2)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-  titlePanel("US Interest Rate"),
+  titlePanel("US Inflation Rate"),
   sidebarLayout(
     sidebarPanel(
       p("text on sidebar"),
@@ -17,6 +17,7 @@ ui <- fluidPage(
                   choices = c("red", "blue", "white"))
     ),
     mainPanel(
+      h1("US Inflation Rate"),
       p("text on main panel"),
       plotOutput("inflation_data")
     )
