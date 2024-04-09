@@ -1,6 +1,10 @@
 library(shiny)
 
-library(ggplot2)
+library(tidyverse)
+library(readxl)
+
+project_data <- read_excel("data.xlsx", sheet = 2)
+
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -9,10 +13,11 @@ ui <- fluidPage(
     sidebarPanel(
       p("text on sidebar"),
       sliderInput("year_data",
-                  label = "User Input: ",
-                  min = 1, 
-                  max = 98,
-                  value = 30),
+                  label = "Year Input:",
+                  min = 2016, 
+                  max = 2024,
+                  sep = "",
+                  value = 2020),
       selectInput("input1", "Choose colour: ",
                   choices = c("red", "blue", "white"))
     ),
@@ -27,9 +32,14 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   output$inflation_data <- renderPlot({
-    ggplot(project_data) + geom_histogram(aes(x = inflation),
-                                          bins = input$year_data,
-                                          fill = input$input1)
+    project_data %>%
+      filter(Year == input$year_data) %>%
+      mutate(Month = as.factor(Month)) %>%
+    ggplot() + geom_col(aes(x = Month, y = Inflation, fill = Month)) +
+      theme_bw() +
+      scale_fill_viridis_d() +
+      guides(fill = "none") +
+      scale_x_discrete(labels = month.abb)
   })
 }
 

@@ -4,6 +4,21 @@ title: "data visualization"
 
 About this sitegbnmh
 
-```{r}
-1 + 1
+```{r, echo=F, message=FALSE}
+library(tidyverse)
+library(readxl)
+```
+
+```{r echo=FALSE}
+
+project_data <- read_excel("data.xlsx", sheet = 2)
+cor(project_data$Inflation, project_data$`Core PCE`)
+```
+
+```{r, echo  =F}
+project_data %>%
+  ggplot(aes(x = Inflation, y = `Core PCE`)) +
+  geom_point() +
+  theme_bw() +
+  geom_smooth(method = "lm")
 ```

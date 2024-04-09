@@ -1,8 +1,10 @@
 {
-  "hash": "f5c04aa877615f992cd891f6dd422550",
+  "hash": "e8f5534e9cc5583c4760ae5c694dd11e",
   "result": {
-    "markdown": "---\ntitle: \"data visualization\"\n---\n\n\nAbout this sitegbnmh\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"data visualization\"\n---\n\n\nAbout this sitegbnmh\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n[1] 0.9337068\n```\n:::\n:::\n\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n```\n`geom_smooth()` using formula = 'y ~ x'\n```\n:::\n\n::: {.cell-output-display}\n![](dataviz_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "dataviz_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

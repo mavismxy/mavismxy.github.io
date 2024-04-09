@@ -1,7 +1,7 @@
 {
-  "hash": "1851d90144958d346eefedb10e7984cd",
+  "hash": "411915fe1de23d5b288e0f3871088ae8",
   "result": {
-    "markdown": "---\ntitle: \"About\"\n---\n\n\nHi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nknitr::include_graphics(\"/Users/mavis/Downloads/IMG_3475.JPG\") \n```\n\n::: {.cell-output-display}\n![](../IMG_3475.JPG)\n:::\n:::\n",
+    "markdown": "---\ntitle: \"About\"\n---\n\n\nHi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nknitr::include_graphics(\"IMG_3475.JPG\") \n```\n\n::: {.cell-output-display}\n![](IMG_3475.JPG)\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

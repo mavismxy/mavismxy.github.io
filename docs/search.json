@@ -11,13 +11,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\nknitr::include_graphics(\"/Users/mavis/Downloads/IMG_3475.JPG\")"
+    "text": "Hi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\nknitr::include_graphics(\"IMG_3475.JPG\")"
   },
   {
     "objectID": "dataviz.html",
     "href": "dataviz.html",
     "title": "data visualization",
     "section": "",
-    "text": "About this sitegbnmh\n\n1 + 1\n\n[1] 2"
+    "text": "About this sitegbnmh\n\n\n[1] 0.9337068\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   }
 ]
