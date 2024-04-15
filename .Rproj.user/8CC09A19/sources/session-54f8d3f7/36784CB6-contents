@@ -2,7 +2,13 @@
 title: "data visualization"
 ---
 
-About this sitegbnmh
+Charts showing different inflation indicators
+
+There are mainly 3 indicators the US Federal Reserve uses to measure inflation, and hence set interest rates.
+
+1.  Inflation
+2.  Core PCE
+3.  CPI
 
 ```{r, echo=F, message=FALSE}
 library(tidyverse)
@@ -18,6 +24,19 @@ cor(project_data$Inflation, project_data$`Core PCE`)
 ```{r, echo  =F}
 project_data %>%
   ggplot(aes(x = Inflation, y = `Core PCE`)) +
+  geom_point() +
+  theme_bw() +
+  geom_smooth(method = "lm")
+```
+
+```{r, echo=FALSE}
+project_data <- read_excel("data.xlsx", sheet = 2)
+cor(project_data$Inflation, project_data$`CPI`)
+```
+
+```{r, echo=FALSE}
+project_data %>%
+  ggplot(aes(x = Inflation, y = `CPI`)) +
   geom_point() +
   theme_bw() +
   geom_smooth(method = "lm")

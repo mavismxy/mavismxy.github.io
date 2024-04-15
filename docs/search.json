@@ -18,6 +18,6 @@
     "href": "dataviz.html",
     "title": "data visualization",
     "section": "",
-    "text": "About this sitegbnmh\n\n\n[1] 0.9337068\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "Charts showing different inflation indicators\nThere are mainly 3 indicators the US Federal Reserve uses to measure inflation, and hence set interest rates.\n\nInflation\nCore PCE\nCPI\n\n\n\n[1] 0.9337068\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n[1] 0.6903717\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
   }
 ]
