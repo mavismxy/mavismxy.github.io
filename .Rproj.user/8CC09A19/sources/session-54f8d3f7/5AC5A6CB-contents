@@ -11,7 +11,7 @@ ui <- fluidPage(
   titlePanel("US Inflation Rate"),
   sidebarLayout(
     sidebarPanel(
-      p("text on sidebar"),
+      p("Slider of Year and Inflation Data"),
       sliderInput("year_data",
                   label = "Year Input:",
                   min = 2016, 
@@ -22,8 +22,8 @@ ui <- fluidPage(
                   choices = c("red", "blue", "white"))
     ),
     mainPanel(
-      h1("US Inflation Rate Year-on-Year"),
-      p("text on main panel"),
+      h1("US Inflation Data"),
+      p("US Inflation Rate Year-on-Year"),
       plotOutput("inflation_data")
     )
   )
