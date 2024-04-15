@@ -22,7 +22,7 @@ ui <- fluidPage(
                   choices = c("red", "blue", "white"))
     ),
     mainPanel(
-      h1("US Inflation Rate"),
+      h1("US Inflation Rate Year-on-Year"),
       p("text on main panel"),
       plotOutput("inflation_data")
     )
