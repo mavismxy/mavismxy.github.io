@@ -11,13 +11,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\nknitr::include_graphics(\"IMG_3475.JPG\")"
+    "text": "Hi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project."
   },
   {
     "objectID": "dataviz.html",
     "href": "dataviz.html",
     "title": "data visualization",
     "section": "",
-    "text": "Charts showing different inflation indicators\nThere are mainly 3 indicators the US Federal Reserve uses to measure inflation, and hence set interest rates.\n\nInflation\nCore PCE\nCPI\n\n\n\n[1] 0.9337068\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n[1] 0.6903717\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "Charts showing different inflation indicators\nThere are mainly 3 indicators the US Federal Reserve uses to measure inflation, and hence set interest rates.\n\nInflation\nCore PCE\nCPI\n\n\n\n[1] 0.9337068\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n[1] 0.6903717\n\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\nWhy looking at inflation indicators is important\n\nInterest rate outlook\nInterest rates have been higher for longer\nBetter budgeting\nPlanning for investments\n\nImportant links:\nhttps://www.cnbc.com/2024/04/16/us-economy-will-see-more-things-break-in-2025-if-rates-stay-high-strategist.html\nhttps://www.cnbc.com/2024/04/11/fed-can-start-cutting-interest-rates-by-end-of-2024-imf-managing-director-says.html?&qsearchterm=interest%20rates\nhttps://www.cnbc.com/video/2024/04/10/how-marchs-cpi-report-could-impact-the-feds-interest-rate-policy.html?&qsearchterm=interest%20rates"
   }
 ]
