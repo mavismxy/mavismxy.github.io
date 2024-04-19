@@ -1,10 +1,8 @@
 {
-  "hash": "fbdaaa3dc6f84b03498076d2d44b2088",
+  "hash": "dea0debffa470184c88660e44727d02c",
   "result": {
-    "markdown": "---\ntitle: \"About\"\n---\n\n\nHi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](IMG_3475.JPG)\n:::\n:::\n",
-    "supporting": [
-      "about_files"
-    ],
+    "markdown": "---\ntitle: \"About\"\n---\n\n\nHi! I am Mavis, a Y3 NUS student, currently doing a double major in CNM and Business. I love tracking financial data, which is why I have wanted to visualise the US inflation data as my project.\n\nI am a budding business news reporter, and during my internship at CNBC, I was acquainted with the workings of financial markets and central banks. It was then and there that I decided I had the ambition to become a television journalist, to report breaking news about the markets for viewers.\n\nYou can visit my portfolio here for more details <https://mavisreporting.wordpress.com/>.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](IMG_3475.JPG)\n:::\n:::\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
