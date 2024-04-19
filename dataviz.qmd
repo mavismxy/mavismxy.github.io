@@ -2,6 +2,30 @@
 title: "data visualization"
 ---
 
+The interactive chart on the main page shows the inflation data for each month, from January 2016 to February 2024.
+
+I wanted to use the interactive chart to illustrate how stable inflation was previously, and how sharply it has risen after 2020.
+
+After the Global Financial Crisis and recession hit the US, inflation has largely remained stable since 2009 all the way to 2020, hovering at about 2%. This allowed the US Federal Reserve to focus on other central bank goals, like unemployment and stimulating economic activity without over-heating the economy.
+
+However, the Covid-19 pandemic threw inflation targets off, and it started dropping dramatically in 2020.
+
+By 2021, the US economy was proving more resilient than previously thought, and instead of grappling with a recession, the Fed had to deal with soaring inflation.
+
+For the first time in almost a decade, inflation started rising past 4%, reaching highs of 7%. And all these happened before yet another supply-shock that would cause inflation to keep rising: the Ukraine War.
+
+Central banks were caught off-guard in 2021, failing to rise interest rates even amidst high inflation. In 2022, with inflation spiralling even higher, the US Fed moved to an extremely hawkish stance, raising interest rates at almost every meeting.
+
+This hawkish stance continued until July 2023, where inflation was coming under control, and the Fed changed from raising interest rates to a hawkish pause.
+
+In the last Fed meeting of 2023 in November, Fed Chair Jay Powell finally acknowledged a dovish pause. This signalled to markets and other central banks that the Fed might cut interest rates soon in 2024.
+
+This optimism might have backfired. With a renewed sense of hope, traders began to price in as many as 5 rate cuts in 2024. This sentiment has carried into the markets, and there has been hotter-than-expected inflation data from November 2023 to February 2024.
+
+What was expected to be a cooling of inflation, has become an excitement over how resilient the US economy is. Initially pricing rate cuts in May 2024, analysts are not not expecting rate cuts until at least the summer, with some even expecting rate hikes instead, since interest rates are going to stay higher for longer.
+
+The US is the largest economy in the world. Central banks around the world and many businesses are affected by the decisions that the Fed makes. While the ECB has stated that its rate decisions are not affected by the Fed, it is important to note how interest rates can also affect exchange rates, which is why most economies would prefer the Fed to cut rates first, so that their dollar is not weakened against the USD.
+
 Charts showing different inflation indicators
 
 There are mainly 3 indicators the US Federal Reserve uses to measure inflation, and hence set interest rates.
@@ -29,6 +53,8 @@ project_data %>%
   geom_smooth(method = "lm")
 ```
 
+Core PCE is the Fed's preferred inflation rate indicator, because it tracks the spending of consumer goods, and how price changes can affect spending.
+
 ```{r, echo=FALSE}
 project_data <- read_excel("data.xlsx", sheet = 2)
 cor(project_data$Inflation, project_data$`CPI`)
@@ -41,6 +67,8 @@ project_data %>%
   theme_bw() +
   geom_smooth(method = "lm")
 ```
+
+CPI is another economic indicator, and tracks the price changes in a representative basket of goods.
 
 Why looking at inflation indicators is important
 
